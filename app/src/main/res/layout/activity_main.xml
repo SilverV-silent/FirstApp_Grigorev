@@ -24,7 +24,8 @@
         android:layout_height="wrap_content"
         android:text="roll the dice"
         tools:layout_editor_absoluteX="144dp"
-        tools:layout_editor_absoluteY="516dp" />
+        tools:layout_editor_absoluteY="516dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -32,6 +33,15 @@
         android:layout_height="155dp"
         app:srcCompat="@drawable/kubik_igralnyj"
         tools:layout_editor_absoluteX="86dp"
-        tools:layout_editor_absoluteY="86dp" />
+        tools:layout_editor_absoluteY="86dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="180dp"
+        android:layout_height="22dp"
+        android:text="цифры выводиться здесь"
+        tools:layout_editor_absoluteX="111dp"
+        tools:layout_editor_absoluteY="385dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
