@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- Основной заголовок -->
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -18,30 +19,55 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.022" />
 
+    <!-- Кнопка для броска кубика -->
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="roll the dice"
-        tools:layout_editor_absoluteX="144dp"
-        tools:layout_editor_absoluteY="516dp"
-        tools:ignore="MissingConstraints" />
+        android:text="Roll the Dice"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintVertical_bias="0.7" />
 
+    <!-- Картинка кубика -->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="238dp"
         android:layout_height="155dp"
         app:srcCompat="@drawable/kubik_igralnyj"
-        tools:layout_editor_absoluteX="86dp"
-        tools:layout_editor_absoluteY="86dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.3" />
 
+    <!-- Текст результата броска -->
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="36sp"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <!-- Надпись "результат появится здесь" -->
     <TextView
         android:id="@+id/textView2"
         android:layout_width="180dp"
         android:layout_height="22dp"
-        android:text="цифры выводиться здесь"
-        tools:layout_editor_absoluteX="111dp"
-        tools:layout_editor_absoluteY="385dp" />
+        android:text="Результат появится здесь:"
+        app:layout_constraintTop_toBottomOf="@id/textViewResult"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
